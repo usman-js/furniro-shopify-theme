@@ -4,29 +4,71 @@
     <p>{{ section.settings.subtitle }}</p>
   </div>
   <div class="browse-imgs">
-    <div class="range-card">
-      <img src="https://via.placeholder.com/300" alt="Dining">
+    <a href="{{ section.settings.dining_link }}" class="range-card">
+      <img src="{{ section.settings.dining_image | image_url: width: 600 }}" alt="Dining">
       <p>Dining</p>
-    </div>
-    <div class="range-card">
-      <img src="https://via.placeholder.com/300" alt="Living">
+    </a>
+    <a href="{{ section.settings.living_link }}" class="range-card">
+      <img src="{{ section.settings.living_image | image_url: width: 600 }}" alt="Living">
       <p>Living</p>
-    </div>
-    <div class="range-card">
-      <img src="https://via.placeholder.com/300" alt="Bedroom">
+    </a>
+    <a href="{{ section.settings.bedroom_link }}" class="range-card">
+      <img src="{{ section.settings.bedroom_image | image_url: width: 600 }}" alt="Bedroom">
       <p>Bedroom</p>
-    </div>
+    </a>
   </div>
 </div>
 
 
 {% schema %}
-    {
-        "name":"brwose",
-        "settings":[
-             { "type": "text", "id": "heading", "label": "Heading" },
-             { "type": "textarea", "id": "subtitle", "label": "Subtitle" },
-             { "type": "url", "id": "button_link", "label": "Button link" },
+  {
+    "name": "browse",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "dining_image",
+        "label": "Dining image"
+      },
+      {
+        "type": "image_picker",
+        "id": "living_image",
+        "label": "Living image"
+      }, 
+      {
+        "type": "image_picker",
+        "id": "bedroom_image",
+        "label": "Bedroom image"
+      },
+      {
+        "type": "url",
+        "id": "dining_link",
+        "label": "Dining link"
+      }, 
+      {
+        "type": "url",
+        "id": "living_link",
+        "label": "Living link"
+      }, 
+      {
+        "type": "url",
+        "id": "bedroom_link",
+        "label": "Bedroom link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "browse"
+      }
     ]
-    }
+  }
 {% endschema %}
