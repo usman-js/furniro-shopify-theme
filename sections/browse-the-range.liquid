@@ -1,3 +1,5 @@
+{{ 'browse-the-range.css' | asset_url | stylesheet_tag }}
+
 <div class="browse-section">
   <div class="browse-heading">
     <h1>{{ section.settings.heading }}</h1>
@@ -5,11 +7,11 @@
   </div>
   <div class="browse-imgs">
     <a href="{{ section.settings.dining_link }}" class="range-card">
-      <img src="{{ section.settings.dining_image | image_url: width: 600 }}" alt="Dining">
+      <img src="{{ section.settings.dining_image | image_url: width: 400 }}" alt="Dining">
       <p>Dining</p>
     </a>
     <a href="{{ section.settings.living_link }}" class="range-card">
-      <img src="{{ section.settings.living_image | image_url: width: 600 }}" alt="Living">
+      <img src="{{ section.settings.living_image | image_url: width: 400 }}" alt="Living">
       <p>Living</p>
     </a>
     <a href="{{ section.settings.bedroom_link }}" class="range-card">
