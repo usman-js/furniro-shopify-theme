@@ -1,0 +1,82 @@
+{{ 'inspiration.css' |  asset_url |  stylesheet_tag }}
+{{ 'inspiration.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'inspirations.js' | asset_url }}" defer></script>
+
+<div class="inspiration-section">
+    <div class="typography">
+        <h1>{{ section.settings.heading }}</h1>
+        <p>{{ section.settings.subtitle }}</p>
+        <div class="inspoBtn">
+          <a href="{{ section.settings.button_url }}">{{ section.settings.button }}</a>
+        </div>
+    </div>
+
+
+   <div class="carusal-wrapper">
+  <div class="carusal-img" id="carousel-track">
+    {% for product in collections[section.settings.inspiration_collection].products limit: 4 %}
+      <div class="inspo-slide">
+        <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title }}">
+        {% if forloop.first %}
+          <div class="inspo-overlay">
+            <p class="inspo-tag">01 — {{ product.type }}</p>
+            <p class="inspo-title">{{ product.title }}</p>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <div class="carusalbtn">
+        <button class="carousel-next" id="carousel-next-btn">→</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% schema %}
+    {
+    "name":"inspiration",
+    "settings":[
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "type": "text",
+                "id": "button",
+                "label": "Button"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": " Button URL"
+            },
+            {
+                 "type": "collection",
+                 "id": "inspiration_collection",
+                  "label": "Inspiration collection"
+            },
+            {
+                "type":"image_picker", 
+                "id":"image1",
+                "label":" image 1" 
+            }
+    ],
+    "presets": [
+        {
+            "name": "inspiration"
+        }
+    ]
+    }
+{% endschema %}

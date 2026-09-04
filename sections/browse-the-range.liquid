@@ -7,16 +7,15 @@
   </div>
   <div class="browse-imgs">
     <a href="{{ section.settings.dining_link }}" class="range-card">
-      <img src="{{ section.settings.dining_image | image_url: width: 400 }}" alt="Dining">
-      <p>Dining</p>
+       <p>{{ section.settings.dining_label }}</p>
     </a>
     <a href="{{ section.settings.living_link }}" class="range-card">
       <img src="{{ section.settings.living_image | image_url: width: 400 }}" alt="Living">
-      <p>Living</p>
+      <p>{{section.settings.living_image}}</p>
     </a>
     <a href="{{ section.settings.bedroom_link }}" class="range-card">
       <img src="{{ section.settings.bedroom_image | image_url: width: 600 }}" alt="Bedroom">
-      <p>Bedroom</p>
+      <p>{{section.settings.bedroom_image}}</p>
     </a>
   </div>
 </div>
@@ -26,6 +25,9 @@
   {
     "name": "browse",
     "settings": [
+      
+      
+      
       {
         "type": "text",
         "id": "heading",
@@ -36,16 +38,19 @@
         "id": "subtitle",
         "label": "Subtitle"
       },
+      { "type": "text", "id": "dining_label", "label": "Dining label" },
       {
         "type": "image_picker",
         "id": "dining_image",
         "label": "Dining image"
       },
+      { "type": "text", "id": "living_label", "label": "Living label" },
       {
         "type": "image_picker",
         "id": "living_image",
         "label": "Living image"
       }, 
+      { "type": "text", "id": "bedroom_label", "label": "Bedroom label" },
       {
         "type": "image_picker",
         "id": "bedroom_image",

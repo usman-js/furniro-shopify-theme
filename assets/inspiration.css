@@ -1,0 +1,65 @@
+.inspiration-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcf8f3;
+  padding: 100px 100px;
+  gap: 60px;
+  position: relative;
+}
+
+.typography {
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.typography h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #3a3a3a;
+  margin: 0 0 20px;
+}
+
+.typography p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #616161;
+  margin: 0 0 30px;
+}
+
+.inspoBtn a {
+  display: inline-block;
+  background-color: #b88e2f;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 45px;
+}
+
+
+.carusal-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 800px; /* adjust to match your single-image width */
+}
+
+.carusal-img {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.inspo-slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.inspo-slide img {
+  width: 178px;
+  height: 286px;
+  object-fit: cover;
+}
