@@ -1,0 +1,48 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+<div class="custom-footer">
+  <div class="footer-heading">
+    <h1>{{ section.settings.footer-heading }}</h1>
+    <p class=" address">{{ section.settings.footer-address }}</p>
+  </div>
+<div class="Links">
+  <p>Links</p>
+  <p>{{ section.settings.links_1 }}</p>
+  <p>{{ section.settings.links_2 }}</p>
+  <p>{{ section.settings.links_3 }}</p>
+  <p>{{ section.settings.links_4 }}</p>
+</div>
+<div class="Help">
+  <p>Help</p>
+  <p>{{ section.settings.help_1 }}</p>
+  <p>{{ section.settings.help_2 }}</p>
+  <p>{{ section.settings.help_3 }}</p>
+</div>
+  <div class="newsletter">
+    <p>Newsletter</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter Your Email Address" class="newsletter-input">
+      <button type="button" class="newsletter-btn">SUBSCRIBE</button>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    { "type": "text", "id": "footer-heading", "label": "Heading" },
+    { "type": "textarea", "id": "footer-address", "label": "Address" },
+    { "type": "text", "id": "links_1", "label": "Links - Item 1" },
+    { "type": "text", "id": "links_2", "label": "Links - Item 2" },
+    { "type": "text", "id": "links_3", "label": "Links - Item 3" },
+    { "type": "text", "id": "links_4", "label": "Links - Item 4" },
+    { "type": "text", "id": "help_1", "label": "Help - Item 1" },
+    { "type": "text", "id": "help_2", "label": "Help - Item 2" },
+    { "type": "text", "id": "help_3", "label": "Help - Item 3" }
+  ],
+  "presets": [
+    { "name": "Custom Footer" }
+  ]
+}
+{% endschema %}

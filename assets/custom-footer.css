@@ -1,0 +1,6 @@
+.custom-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    padding-top: 30px;
+}
