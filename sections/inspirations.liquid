@@ -16,22 +16,15 @@
   <div class="carusal-img" id="carousel-track">
     {% for product in collections[section.settings.inspiration_collection].products limit: 4 %}
       <div class="inspo-slide">
-        <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title }}">
-        {% if forloop.first %}
-          <div class="inspo-overlay">
-            <p class="inspo-tag">01 — {{ product.type }}</p>
-            <p class="inspo-title">{{ product.title }}</p>
-          </div>
-        {% endif %}
+        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title }}">
       </div>
     {% endfor %}
-    <div class="carusalbtn">
-        <button class="carousel-next" id="carousel-next-btn">→</button>
-    </div>
   </div>
-
+  <div class="carusalbtn">
+    <button class="carousel-next" id="carousel-next-btn">→</button>
+  </div>
 </div>
-
+</div>
 
 
 

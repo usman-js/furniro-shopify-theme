@@ -62,4 +62,25 @@
   width: 178px;
   height: 286px;
   object-fit: cover;
+  margin-left: 70px;
+}
+.carusalbtn {
+  position: absolute;
+  top: 130px;
+  right: 24px;
+  z-index: 10;
+}
+
+.carousel-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #b88e2f;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
