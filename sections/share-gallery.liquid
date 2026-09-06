@@ -1,11 +1,11 @@
-{{  }}
-<div class="section">
+{{ 'share_gallery.css' |  asset_url | stylesheet_tag}}
+<div class="gallery-section">
     <div class="heading">
         <p>{{ section.settings.tag }}</p>
         <h1>{{ section.settings.heading }}</h1>
     </div>
     <div class="image">
-        <img src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title }}">
+        <img src="{{ section.settings.featured_image | image_url: width: 1200 }}" alt="{{ section.settings.heading }}">
     </div>
 </div>
 
@@ -24,7 +24,16 @@
                     "id": "heading",
                     "label":"Headline"
                 },
-                
+                {
+                    "type":"image_picker",
+                    "id":"featured_image",
+                    "label":" Main Image"
+                }
+        ],
+        "presets": [
+            {
+                "name":"gallery"
+            }
         ]
     }
 {% endschema %}

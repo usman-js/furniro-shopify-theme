@@ -1,0 +1,33 @@
+.gallery-section{
+    margin-top: 50px;
+    font-family: "poppins", sans-serif;
+}
+.heading{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px ;
+    position: relative;
+}
+.heading p {
+  margin: 0;
+  position: absolute;
+  bottom: 10;
+
+}
+
+.heading h1 {
+  margin: 0;
+  position: absolute;
+  top: 25px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.image{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    margin-top: 35px;
+}
